@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import * as postService from '../../services/postService';
+import * as supportPostService from '../../services/supportPostService';
 
-export default function PostListPage() {
+export default function SupportWallPage() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     async function fetchPosts() {
-      const posts = await postService.index();
+      const posts = await supportPostService.index();
       setPosts(posts);
     }
     fetchPosts();
