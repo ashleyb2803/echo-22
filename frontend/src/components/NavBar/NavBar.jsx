@@ -13,25 +13,40 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav className="NavBar">
-      <NavLink to="/">Home</NavLink>
-      &nbsp; | &nbsp;
+      <div className="nav-brand">
+        <NavLink to="/" className="brand-link">Echo 22</NavLink>
+      </div>
+      
       {user ? (
-        <>
-          <NavLink to="/posts" end>
-            Post List
+        <div className="nav-links">
+          <NavLink to="/" end className="nav-item">
+            🏠 Dashboard
           </NavLink>
-          &nbsp; | &nbsp;
-          <NavLink to="/posts/new">New Post</NavLink>
-          &nbsp; | &nbsp;
-          <Link to="/" onClick={handleLogOut}>Log Out</Link>
-          <span>Welcome, {user.name}</span>
-        </>
+          <NavLink to="/buddy-system" className="nav-item">
+            🤝 Buddy System
+          </NavLink>
+          <NavLink to="/journal" className="nav-item">
+            📝 Journal
+          </NavLink>
+          <NavLink to="/resources" className="nav-item">
+            📚 Resources
+          </NavLink>
+          <NavLink to="/posts" className="nav-item">
+            💬 Community
+          </NavLink>
+          
+          <div className="nav-user">
+            <span className="welcome-text">Welcome, {user.name}</span>
+            <Link to="/" onClick={handleLogOut} className="logout-btn">
+              Log Out
+            </Link>
+          </div>
+        </div>
       ) : (
-        <>
-          <NavLink to="/login">Log In</NavLink>
-          &nbsp; | &nbsp;
-          <NavLink to="/signup">Sign Up</NavLink>
-        </>
+        <div className="nav-auth">
+          <NavLink to="/login" className="auth-link">Log In</NavLink>
+          <NavLink to="/signup" className="auth-link signup">Sign Up</NavLink>
+        </div>
       )}
     </nav>
   );
