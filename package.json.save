@@ -13,9 +13,12 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "bcrypt": "^6.0.0",
+<<<<<<< HEAD
     "bcryptjs": "^3.0.2",
+=======
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
+>>>>>>> 7c77826 (fix authentication)
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
@@ -24,3 +27,8 @@
     "serve-favicon": "^2.5.1"
   }
 }
+X
+
+x
+^X 
+
