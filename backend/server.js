@@ -4,8 +4,9 @@ const path = require('path');
 const logger = require('morgan');
 const cors = require('cors');
 
-// Database connection
+// Load environment variables first
 require('dotenv').config();
+// Then connect to database
 require('./db');
 
 const app = express();
