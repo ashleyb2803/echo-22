@@ -1,13 +1,13 @@
+// Load environment variables first
+require('dotenv').config();
+// Then connect to database
+require('./db');
+
 const express = require('express');
 const path = require('path');
 //const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cors = require('cors');
-
-// Load environment variables first
-require('dotenv').config();
-// Then connect to database
-require('./db');
 
 const app = express();
 
